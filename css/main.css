@@ -1,0 +1,1189 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+overflow-x: hidden;
+}
+
+.root{
+    font-size: 0.625rem;
+}
+
+/* header */
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(./../images/main-bcg.jpeg) center/cover no-repeat fixed;
+
+}
+
+input#open-menu{
+    display: none;
+}
+
+label.open-menu{
+    font-size: 2.5rem;
+    color:#678e3e ;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    animation:bila 2s ease-in infinite;
+    z-index: 1;
+}
+
+label.close-menu{
+    color: palevioletred;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    padding-top: 5px;
+    font-size: 50px;
+}
+/* menu-bar */
+section.menu{
+    width: 20%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 300ms;
+    z-index: 1;
+    overflow-x: visible;
+}
+
+label.close-menu>i{
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+label.close-menu>i:hover{
+    color: rgb(177, 0, 0);
+    transition: all 400ms;
+}
+
+
+section.menu>nav{
+    width: 100%;
+    height: 100%;
+}
+
+section.menu>nav>ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+section.menu>nav>ul>li{
+    width: 100%;
+    height: 60px;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    transition: all 200ms;
+    text-transform: uppercase;
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 2px;
+}
+
+section.menu>nav>ul>li:hover>a{
+    color: #678e3e;
+    transform: scale(1.09);
+    transition: all 500ms;
+}
+
+section.menu>nav>ul>li:hover{
+    background-color: #beed8c;
+}
+
+section.menu>nav>ul>li>a{
+    color: #617d98;
+    transition: all 200ms;
+}
+
+section.menu>nav>ul>li>a:active{
+    color: #20b244;
+}
+
+input#open-menu:checked~section.menu{
+    transform: translateX(0px);
+}
+
+@keyframes bila {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+/* end menu-bar */
+
+/* head-text */
+section.text>div{
+    width: 100%;
+    height: 100vh;
+}
+section.text>div>h3{
+display: flex;
+justify-content: center;
+padding-top: 200px;
+padding-right:10px;
+font-size: 3rem;
+font-family: 'Catamaran', sans-serif;
+font-family: 'Imprima', sans-serif;
+font-family: 'Poller One', cursive;
+color: #678e3e;
+font-weight: 500;
+}
+
+section.text>div>h1{
+    display: flex;
+    justify-content: center;
+    padding-top:10px ;
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+    letter-spacing:3px;
+}
+
+section.text>div>a{
+    width: 171px;
+    height: 64px;
+    margin-left: 670px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #678e3e;
+    text-transform: uppercase;
+    outline: 0.125rem solid #678e3e;
+    outline-offset: 0.25rem;
+    font-size: 1.2rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 300ms;
+}
+
+section.text>div>a:hover{
+    background-color: #beed8c;
+    color: #679044;
+}
+/* end head-text */
+
+/* end-header */
+
+/* main */
+
+main>div.linear{
+    width: 100%;
+    height: 8px;
+    background-color: #678e3e;
+    background-image: linear-gradient( to right, #678e3e, #e9b949, #678e3e);
+}
+ /* main-options */
+main>section.info{
+    width: 100%;
+    height: 250px;
+    background-color: #f1f5f8;
+    display: flex;
+}
+
+main>section.info>div{
+    width: 25%;
+    height: fit-content;
+    text-align: center;
+}
+
+main>section.info>div.mug{
+width: 25%;
+height: inherit;
+
+}
+
+main>section.info>div.mug>i{
+    font-size: 2.5rem;
+    color: #678e3e;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+main>section.info>div>h4{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+main>section.info>div>p{
+    font-family: 'Catamaran', sans-serif;
+    color: #7a91a8;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align:center ;
+    line-height: 1.75;
+}
+
+main>section.info>div.mug:hover{
+    background-color: white;
+border-bottom: 3px solid #678e3e;    
+}
+
+main>section.info>div.mug:hover>i{
+    transform: translateY(-5px);
+    transition: all 400ms;
+}
+
+main>section.info>div.cheers{
+    width: 25%;
+    height: inherit;
+    padding-top: 25px;
+}
+
+main>section.info>div.cheers>i{
+    font-size: 2.5rem;
+    color: #678e3e;
+}
+
+main>section.info>div.cheers:hover{
+    background-color: white;
+    height: inherit;
+    border-bottom: 3px solid #678e3e; 
+}
+
+main>section.info>div.cheers:hover>i{
+    transform: translateY(-5px);
+    transition: all 400ms;
+}
+
+main>section.info>div.bomb{
+    width: 25%;
+    height: inherit;
+    padding-top: 25px;
+}
+
+main>section.info>div.bomb>i{
+    font-size: 2.5rem;
+    color: #678e3e;
+}
+
+main>section.info>div.bomb:hover{
+    background-color: white;
+    height: inherit;
+    border-bottom: 3px solid #678e3e; 
+}
+
+main>section.info>div.bomb:hover>i{
+    transform: translateY(-5px);
+    transition: all 400ms;
+}
+
+main>section.info>div.mortar{
+    width: 25%;
+    height: inherit;
+    padding-top: 25px;
+}
+
+main>section.info>div.mortar>i{
+    font-size: 2.5rem;
+    color: #678e3e;
+}
+
+main>section.info>div.mortar:hover{
+    background-color: white;
+    height: inherit;
+    border-bottom: 3px solid #678e3e; 
+}
+
+main>section.info>div.mortar:hover>i{
+    transform: translateY(-5px);
+    transition: all 400ms;
+}
+ /* end main-options */
+
+ /* main-about */
+section.about{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+section.about>div:first-child{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+section.about>div:first-child>div{
+    width: 70%;
+    height: fit-content;
+    border: 10px solid #678e3e;
+    overflow: hidden;
+    position: relative;
+}
+
+section.about>div:first-child>div>div{
+    width: 100%;
+    height: 100%;
+    background-color: #678e3e8f;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+}
+
+section.about>div:first-child>div>img{
+    width: 100%;
+    height: fit-content;
+    display: block;
+    transition: all 500ms;
+}
+
+section.about>div:first-child>div:hover>img{
+    transform: scale(1.1);
+}
+
+section.about>div:first-child>div:hover>div{
+    opacity: 1;
+}
+
+section.about>div:last-child{
+    width: 50%;
+    height: fit-content;
+}
+section.about>div.others{
+position: relative;
+overflow-x: visible;
+}
+
+section.about>div.others>h3{
+color: #678e3e;
+font-size: 2rem;
+font-family: 'Catamaran', sans-serif;
+font-family: 'Imprima', sans-serif;
+font-family: 'Poller One', cursive;
+letter-spacing: 4px;
+}
+
+section.about>div.others>h1{
+    font-size: 2.75rem;
+    font-family: 'Catamaran', sans-serif;
+font-family: 'Imprima', sans-serif;
+font-family: 'Poller One', cursive;
+color: #102A42;
+}
+
+section.about>div.others>p{
+    padding-top: 30px;
+    color: #7a91a8;
+    font-family: 'Catamaran', sans-serif;
+}
+
+section.about>div.others>a{
+    width: 170px;
+    height: 30px;
+    background-color: #678e3e;
+    position: absolute;
+    color: rgb(252, 252, 252);
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 400ms;
+}
+
+section.about>div.others>a:hover{
+    background-color: #beed8c;
+    color: #679044;
+    transition: all 500ms;
+}
+
+/* end main-about */
+
+/* main-checkout */
+section.check-out{
+    width: 1535px;
+    height: 550px;
+    background-color: #f1f5f8;
+    display: flex;
+    position: relative;
+}
+
+section.check-out>div.left>h3{
+color: #678e3e;
+font-family: 'Catamaran', sans-serif;
+font-family: 'Imprima', sans-serif;
+font-family: 'Poller One', cursive;
+font-size: 2rem; 
+letter-spacing: 3px;
+padding-left: 110px;
+padding-top: 100px;
+}
+
+section.check-out>div.left>h1{
+font-family: 'Catamaran', sans-serif;
+font-size: 2.75rem;
+padding-left: 105px;
+letter-spacing: 7px;
+color: #102A42;
+}
+
+section.check-out>div.left>p{
+font-family: 'Catamaran', sans-serif;
+padding-left: 110px; 
+padding-top: 30px;
+line-height: 1.5;
+color: #617d98;
+}
+
+section.check-out>div.left>a{
+position: absolute;
+font-family: 'Catamaran', sans-serif;
+font-weight: 700;
+margin-left: 110px;
+margin-top:15px ;
+text-transform: uppercase;
+width: 150px;
+height: 35px;
+background-color: #678e3e;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+letter-spacing:4px ;
+transition: all 400ms;
+}
+
+section.check-out>div.left>a:hover{
+    background-color: #beed8c;
+    color: #678e3e;
+    transition: all 400ms;
+}
+
+
+
+section.check-out>div.image1>img{
+    border-radius: 5px;
+    width: 250px;
+    height: 265px;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+section.check-out>div.image1>h5.top{
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.25rem;
+    padding-left: 40px;
+    padding-top: 30px;
+    color: #102A42;
+    letter-spacing: 3px;
+}
+
+section.check-out>div.image1>h5.price{
+    padding-left: 40px;
+    padding-top: 10px;
+    font-size: 1.25rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 500;
+    color: #678E3E;
+    letter-spacing: 3px;
+}
+
+section.check-out>div.image2>img{
+    width: 250px;
+    height: 265px;
+    margin-left: 30px;
+    margin-top: 110px;
+    border-radius: 5px;
+}
+
+section.check-out>div.image2>h5.top{
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.25rem;
+    padding-left: 40px;
+    padding-top: 30px;
+    color: #102A42;
+    letter-spacing: 3px;
+}
+
+section.check-out>div.image2>h5.price{
+    padding-left: 40px;
+    padding-top: 10px;
+    font-size: 1.25rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 500;
+    color: #678E3E;
+    letter-spacing: 3px;
+}
+
+section.check-out>div.image3>img{
+    width: 250px;
+    height: 265px;
+    margin-left: 30px;
+    margin-top: 110px;
+    border-radius: 5px;
+}
+
+section.check-out>div.image3>h5.top{
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.25rem;
+    padding-left: 40px;
+    padding-top: 30px;
+    color: #102A42;
+    letter-spacing: 3px;
+}
+
+section.check-out>div.image3>h5.price{
+    padding-left: 40px;
+    padding-top: 10px;
+    font-size: 1.25rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 500;
+    color: #678E3E;
+    letter-spacing: 3px;
+}
+
+/* end main-checkout */
+
+/* main-explorer */
+
+section.explorer{
+    width: 100%;
+    height: 800px;
+}
+
+section.explorer>div.exp>h3{
+color: #678E3E;
+font-family: 'Catamaran', sans-serif;
+font-family: 'Imprima', sans-serif;
+font-family: 'Poller One', cursive;
+display: flex;
+justify-content: center;
+padding-top: 50px;
+font-size: 2rem;
+letter-spacing: 3px;
+}
+
+section.explorer>div.exp>h1{
+    color: #102A42;
+    font-family: 'Catamaran', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 3.25rem;
+    letter-spacing: 4px;
+    padding-top: 5px;
+}
+
+section.explorer>div.product1{
+    background-color:#f1f5f8;
+    width: 400px;
+    height: 540px;
+    margin-left: 100px;
+    border-radius: 5px;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    transition: all 700ms;
+}
+
+section.explorer>div.product1:hover{
+    transform: scale(1.05);
+    transition: all 400ms ;
+}
+
+section.explorer>div.product1>div{
+    width: 70px;
+    height: 70px;
+    background-color:#f1f5f8;
+    border-radius: 50%;
+    margin-left:160px ;
+   margin-top: 265px;
+   position: absolute;
+   display: flex;
+}
+
+section.explorer>div.product1>i{
+    color: hsl(89, 39%, 40%);
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #beed8c;
+    margin-left: 164px;
+    margin-top: 268px;
+    z-index: 1;
+}
+
+section.explorer>div.product1>img{
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: -226px;
+}
+
+section.explorer>div.product1>h4{
+    color: #102A42;
+    margin-top: 340px;
+    margin-left: -300px;
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    
+}
+
+section.explorer>div.product1>p{
+    margin-top: 400px;
+    margin-left: -270px; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+    color: #7a91a8;
+    line-height: 1.5;
+}
+
+section.explorer>div.product1>a{
+    margin-top: 490px;
+    margin-left: -215px;
+    color: white;
+    background-color: #678E3E;
+    width: 104px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    transition: all 400ms;
+}
+
+section.explorer>div.product1>a:hover{
+    background-color: #beed8c;
+    color: #678E3E;
+    transition: all 400ms;
+}
+
+section.explorer>div.product2{
+    background-color:#f1f5f8;
+    width: 400px;
+    height: 540px;
+    margin-left: 570px;
+    margin-top: -540px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    transition: all 700ms;
+}
+
+section.explorer>div.product2:hover{
+    transform: scale(1.05);
+    transition: all 400ms ;
+}
+
+section.explorer>div.product2>div{
+    width: 70px;
+    height: 70px;
+    background-color:#f1f5f8;
+    border-radius: 50%;
+    margin-left:160px ;
+   margin-top: 265px;
+   position: absolute;
+   display: flex;
+}
+
+section.explorer>div.product2>i{
+    color: hsl(89, 39%, 40%);
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #beed8c;
+    margin-left: 164px;
+    margin-top: 268px;
+    z-index: 1;
+}
+
+section.explorer>div.product2>img{
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: -226px;
+}
+
+section.explorer>div.product2>h4{
+    color: #102A42;
+    margin-top: 340px;
+    margin-left: -295px;
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    
+}
+
+section.explorer>div.product2>p{
+    margin-top: 400px;
+    margin-left: -220px; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+    color: #7a91a8;
+    line-height: 1.5;
+}
+
+section.explorer>div.product2>a{
+    margin-top: 490px;
+    margin-left: -200px;
+    color: white;
+    background-color: #678E3E;
+    width: 104px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    transition: all 400ms;
+}
+
+section.explorer>div.product2>a:hover{
+    background-color: #beed8c;
+    color: #678E3E;
+    transition: all 400ms;
+}
+
+section.explorer>div.product3{
+    background-color:#f1f5f8;
+    width: 400px;
+    height: 540px;
+    margin-left: 1045px;
+    margin-top: -540px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    transition: all 700ms;
+}
+
+section.explorer>div.product3:hover{
+    transform: scale(1.05);
+    transition: all 700ms ;
+    animation: product3 700ms;
+}
+
+section.explorer>div.product3>div{
+    width: 70px;
+    height: 70px;
+    background-color:#f1f5f8;
+    border-radius: 50%;
+    margin-left:160px ;
+   margin-top: 265px;
+   position: absolute;
+   display: flex;
+}
+
+section.explorer>div.product3>i{
+    color: hsl(89, 39%, 40%);
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #beed8c;
+    margin-left: 164px;
+    margin-top: 268px;
+    z-index: 1;
+}
+
+section.explorer>div.product3>img{
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: -226px;
+}
+
+section.explorer>div.product3>h4{
+    color: #102A42;
+    margin-top: 340px;
+    margin-left: -265px;
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    
+}
+
+section.explorer>div.product3>p{
+    margin-top: 400px;
+    margin-left: -230px; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+    color: #7a91a8;
+    line-height: 1.5;
+}
+
+section.explorer>div.product3>a{
+    margin-top: 490px;
+    margin-left: -235px;
+    color: white;
+    background-color: #678E3E;
+    width: 104px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    transition: all 400ms;
+}
+
+section.explorer>div.product3>a:hover{
+    background-color: #beed8c;
+    color: #678E3E;
+    transition: all 400ms;
+}
+
+/* end main-explorer */
+
+/* end main */
+
+/* footer */
+
+/* footer-contact */
+
+section.address{
+    width: 100%;
+    height: 560px;
+    background-color: #f1f5f8;
+}
+
+section.address>div.add>i{
+    font-size: 1.5rem;
+    margin-left: 130px;
+    margin-top: 80px;
+    color: #678E3E;
+}
+
+section.address>div.add>h3{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #678E3E;
+    margin-left: 163px;
+    margin-top: -22px;
+    letter-spacing: 5px;
+}
+
+section.address>div.add>h2{
+    color: #102A42;
+    font-family: 'Catamaran', sans-serif;
+    margin-left: 128px;
+    margin-top: 10px;
+    word-spacing: 10px;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+}
+
+section.address>div.email>i{
+    font-size: 1.25rem;
+    margin-left: 130px;
+    margin-top:35px ;
+    color: #678E3E;
+}
+
+section.address>div.email>h3{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #678E3E;
+    margin-left: 160px;
+    margin-top:-18px ;
+    letter-spacing: 5px;
+}
+
+section.address>div.email>h2{
+    color: #102A42;
+    font-family: 'Catamaran', sans-serif;
+    margin-left: 128px;
+    margin-top: 10px;
+    word-spacing: 10px;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+}
+
+section.address>div.tel>i{
+    font-size: 1.25rem;
+    margin-left: 130px;
+    margin-top:35px ;
+    color: #678E3E;
+}
+
+section.address>div.tel>h3{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #678E3E;
+    margin-left: 160px;
+    margin-top:-18px ;
+    letter-spacing: 5px;
+}
+
+section.address>div.tel>h2{
+    color: #102A42;
+    font-family: 'Catamaran', sans-serif;
+    margin-left: 128px;
+    margin-top: 10px;
+    word-spacing: 10px;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+}
+
+section.cont{
+    width: 550px;
+    height: 450px;
+    margin-left: 800px;
+    margin-top: -260px;
+    border-radius: 10px;
+    background-color:#fdfdfd;
+}
+
+section.cont>div.contact>h2{
+    margin-left: 170px;
+    padding-top:50px;
+    font-family: 'Catamaran', sans-serif;
+    color: #617d98;
+    font-size: 2rem;
+    letter-spacing: 4px;
+}
+
+section.cont>div.contact>input.form1{
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #f1f5f8;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border:#f1f5f8 ;
+    font-family: 'Catamaran', sans-serif;
+    font-family: 'Imprima', sans-serif;
+    padding-left: 20px;
+}
+
+section.cont>div.contact>input.form{
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #f1f5f8;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border:#f1f5f8 ;
+    font-family: 'Catamaran', sans-serif;
+    font-family: 'Imprima', sans-serif;
+    padding-left: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+section.cont>div.contact>textarea{
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #f1f5f8;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border:#f1f5f8 ;
+    font-family: 'Catamaran', sans-serif;
+    font-family: 'Imprima', sans-serif;
+    margin-left: 30px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+section.cont>div.contact>div>button.subbtn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #678E3E;
+    border: #678E3E;
+    text-transform: uppercase;
+    color: #f1f5f8;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    transition: all 400ms;
+}
+
+section.cont>div.contact>div>button.subbtn:hover{
+    background-color: #beed8c;
+    color: #678E3E;
+    transition: all 400ms;
+}
+
+/* end footer-contact */
+
+/* footer-social */
+
+section.social{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    background-color: #222222;
+}
+
+section.social>div>i.fa-facebook{
+    margin-left:700px;
+    margin-top: 60px;
+    color:white;
+    font-size: 1.5rem;
+    transition: all 500ms;
+}
+
+section.social>div>i.fa-twitter{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 80px;
+    margin-left: 20px;
+    transition: all 500ms;
+}
+
+section.social>div>i.fa-instagram{
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: all 500ms;
+}
+
+section.social>div>i:hover{
+    color:#678E3E;
+    transition: all 500ms;
+}
+
+section.social>div>h3{
+    font-size: 1rem;
+    color: white;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 100;
+    letter-spacing: 5px;
+    margin-left: 500px;
+    margin-top: 30px;
+}
+
+section.social>div>h3>span{
+    color: #678E3E;
+}
+
+/* end footer-social */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
